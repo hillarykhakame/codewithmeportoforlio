@@ -1,0 +1,113 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block aboutactive%}active{% endblock aboutactive%}
+{% block title %} about {% endblock title %} 
+{% block body %}
+<style>
+  .card-container {
+    display: flex;
+    gap: 1rem; /* Space between cards */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    justify-content: center;
+  }
+
+  .card {
+    flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+    width: 18rem; /* Fixed width for cards */
+  }
+
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  footer {
+    background-color: #343a40; /* Bootstrap dark color */
+    color: #f8f9fa; /* Bootstrap light text */
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+</style>
+
+<!-- Main Content -->
+<div class="container mt-3 content">
+  <h2 class="text-center">About Me</h2>
+  <div class="container mt-4">
+    <div class="card-container">
+      <div class="card">
+        <img
+          src="https://media.istockphoto.com/id/1552848385/photo/thinking-code-hologram-and-woman-with-tablet-data-analysis-digital-technology-and-software.webp?b=1&s=170667a&w=0&k=20&c=Vp4mFufjGBseJoXB8Mz22TDFeZlA18pMo6EJD_gqDh4="
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title"><strong>Larry the Developer</strong></h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Get more info</a>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://media.istockphoto.com/id/1552848385/photo/thinking-code-hologram-and-woman-with-tablet-data-analysis-digital-technology-and-software.webp?b=1&s=170667a&w=0&k=20&c=Vp4mFufjGBseJoXB8Mz22TDFeZlA18pMo6EJD_gqDh4="
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            <strong>Larry the Data Designer</strong>
+          </h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Get more info</a>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://media.istockphoto.com/id/1552848385/photo/thinking-code-hologram-and-woman-with-tablet-data-analysis-digital-technology-and-software.webp?b=1&s=170667a&w=0&k=20&c=Vp4mFufjGBseJoXB8Mz22TDFeZlA18pMo6EJD_gqDh4="
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title"><strong>Larry the Trainer</strong></h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Get more info</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Section -->
+  <div class="container mt-3">
+    <h2 class="text-center">My Coding Video</h2>
+    <div class="d-flex justify-content-center">
+      <iframe
+        width="500"
+        height="250"
+        src="https://www.youtube.com/embed/ESky4QTOVZo?list=PLK8cqdr55Tsv-D2HMdrnD32oOVBNvmxjr"
+        title="Adding Further Design to our Developer Portfolio Website | Django Tutorial #9"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+{% endblock body%}

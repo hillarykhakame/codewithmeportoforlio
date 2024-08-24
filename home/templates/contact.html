@@ -1,0 +1,59 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block contactactive%}active{% endblock contactactive%} 
+{% block title %} contact {% endblock title %} 
+{% block body %}
+<div class="container my-3">
+  <h2 style="text-align: center">Contact me for Inquiry</h2>
+  <form action="/contact" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        aria-describedby="emailHelp"
+        placeholder="Please type your name here"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        aria-describedby="emailHelp"
+        placeholder="Please type your email here"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+      <input
+        type="phone"
+        class="form-control"
+        id="phone"
+        name="phone"
+        aria-describedby="emailHelp"
+        placeholder="Please type your phone number here"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >Explain Your Concern</label
+      >
+      <textarea
+        class="form-control"
+        id="desc"
+        name="desc"
+        placeholder="Your Concern"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock body%}

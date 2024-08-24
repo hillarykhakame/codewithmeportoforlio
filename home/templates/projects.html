@@ -1,0 +1,73 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block projectsactive%}active{% endblock projectsactive%}
+{% block title %} projects {% endblock title %} 
+{% block body %}
+<style>
+  .card-container {
+    display: flex;
+    gap: 1rem; /* Space between cards */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    justify-content: center;
+  }
+  .card {
+    flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+    width: 18rem; /* Fixed width for cards */
+  }
+</style>
+
+<div class="container mt-3">
+  <h2 style="text-align: center">My Projects</h2>
+  <div class="container mt-4">
+    <div class="card-container">
+      <div class="card">
+        <img
+          src="https://media.istockphoto.com/id/1552848385/photo/thinking-code-hologram-and-woman-with-tablet-data-analysis-digital-technology-and-software.webp?b=1&s=170667a&w=0&k=20&c=Vp4mFufjGBseJoXB8Mz22TDFeZlA18pMo6EJD_gqDh4="
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title"><strong>Larry the Developer</strong></h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Get more info</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://media.istockphoto.com/id/1552848385/photo/thinking-code-hologram-and-woman-with-tablet-data-analysis-digital-technology-and-software.webp?b=1&s=170667a&w=0&k=20&c=Vp4mFufjGBseJoXB8Mz22TDFeZlA18pMo6EJD_gqDh4="
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title"><strong>Larry the Data Designer</strong></h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Get more info</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://media.istockphoto.com/id/1552848385/photo/thinking-code-hologram-and-woman-with-tablet-data-analysis-digital-technology-and-software.webp?b=1&s=170667a&w=0&k=20&c=Vp4mFufjGBseJoXB8Mz22TDFeZlA18pMo6EJD_gqDh4="
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title"><strong>Larry the Trainer </strong></h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Get more info</a>
+        </div>
+      </div>
+    </div>
+    {% endblock body%}
+  </div>
+</div>
